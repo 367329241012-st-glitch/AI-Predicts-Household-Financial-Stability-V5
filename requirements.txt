@@ -1,7 +1,9 @@
 # ล็อกเวอร์ชันให้ตรงกับที่ใช้สร้างและตรวจแบบจำลอง
 # ทดสอบแล้ว: Python 3.12 (ทั้งระบบ: app_env_check, app_model_check, app_pipeline_check) และ Python 3.13 (app_model_check)
 # S3_nn_model.pkcls บันทึกด้วย Orange 3.40 + scikit-learn 1.5.2
-# บน Streamlit Community Cloud ให้เลือก Python 3.12 ใน Advanced settings ตอน Deploy (ใช้ 3.13 ได้)
+# ต้องใช้ Python 3.12 หรือ 3.13 เท่านั้น: Python 3.14 ยังไม่มีไฟล์ติดตั้งสำเร็จรูป (wheel) ของ Orange3 3.40.0 และ scikit-learn 1.5.2
+# ส่วน Python 3.11 ไม่มี wheel ของ scipy 1.18.1 ถ้าใช้รุ่นอื่น การติดตั้งจะล้มเหลวและแอปจะขึ้น "No module named 'Orange'"
+# บน Streamlit Community Cloud ให้เลือก Python 3.12 ใน Advanced settings ตอน Deploy
 streamlit==1.66.1
 Orange3==3.40.0
 scikit-learn==1.5.2
